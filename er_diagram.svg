@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 24px; font-weight: bold; fill: #1c130e; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #785947; }
+      .tbl-hdr { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: bold; fill: #ffffff; }
+      .pk { font-family: 'Segoe UI', monospace; font-size: 11px; font-weight: bold; fill: #b45309; }
+      .fk { font-family: 'Segoe UI', monospace; font-size: 11px; font-weight: bold; fill: #5c3a21; }
+      .col { font-family: 'Segoe UI', sans-serif; font-size: 11px; fill: #2c1d15; }
+      .type { font-family: 'Segoe UI', monospace; font-size: 10px; fill: #856b5b; }
+      .rel-line { stroke: #5c3a21; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="960" height="560" fill="#fbf9f6" rx="10"/>
+  <rect x="15" y="15" width="930" height="530" fill="#ffffff" stroke="#e6ded6" stroke-width="2" rx="8"/>
+
+  <text x="40" y="50" class="title">BrewTrack - Coffee Shop Database Entity-Relationship Diagram (ERD)</text>
+  <text x="40" y="70" class="sub">Relational MySQL Schema: Categories, Roasters/Suppliers, Cafe Products, Baristas, and Stock Movement Logs</text>
+
+  <!-- TABLE: CATEGORIES (Top Left) -->
+  <g transform="translate(40, 100)">
+    <rect width="210" height="150" fill="#ffffff" stroke="#e6ded6" stroke-width="1.5" rx="6"/>
+    <rect width="210" height="32" fill="#5c3a21" rx="6"/>
+    <text x="12" y="21" class="tbl-hdr">CATEGORIES</text>
+    <text x="12" y="52" class="pk">PK</text><text x="35" y="52" class="col">category_id</text><text x="150" y="52" class="type">INT (AI)</text>
+    <text x="35" y="74" class="col">category_name</text><text x="150" y="74" class="type">VARCHAR(100)</text>
+    <text x="35" y="96" class="col">description</text><text x="150" y="96" class="type">TEXT</text>
+    <text x="35" y="118" class="col">created_at</text><text x="150" y="118" class="type">TIMESTAMP</text>
+  </g>
+
+  <!-- TABLE: SUPPLIERS (Bottom Left) -->
+  <g transform="translate(40, 310)">
+    <rect width="210" height="200" fill="#ffffff" stroke="#e6ded6" stroke-width="1.5" rx="6"/>
+    <rect width="210" height="32" fill="#785947" rx="6"/>
+    <text x="12" y="21" class="tbl-hdr">SUPPLIERS / ROASTERS</text>
+    <text x="12" y="52" class="pk">PK</text><text x="35" y="52" class="col">supplier_id</text><text x="150" y="52" class="type">INT (AI)</text>
+    <text x="35" y="74" class="col">supplier_name</text><text x="150" y="74" class="type">VARCHAR(150)</text>
+    <text x="35" y="96" class="col">contact_person</text><text x="150" y="96" class="type">VARCHAR(100)</text>
+    <text x="35" y="118" class="col">email</text><text x="150" y="118" class="type">VARCHAR(100)</text>
+    <text x="35" y="140" class="col">phone</text><text x="150" y="140" class="type">VARCHAR(30)</text>
+    <text x="35" y="162" class="col">address</text><text x="150" y="162" class="type">TEXT</text>
+    <text x="35" y="184" class="col">status</text><text x="150" y="184" class="type">ENUM('ACTIVE'...)</text>
+  </g>
+
+  <!-- TABLE: PRODUCTS (Center) -->
+  <g transform="translate(360, 100)">
+    <rect width="250" height="300" fill="#ffffff" stroke="#b45309" stroke-width="2" rx="6"/>
+    <rect width="250" height="32" fill="#b45309" rx="6"/>
+    <text x="12" y="21" class="tbl-hdr">PRODUCTS (CAFE ITEMS)</text>
+    <text x="12" y="52" class="pk">PK</text><text x="35" y="52" class="col">product_id</text><text x="175" y="52" class="type">INT (AI)</text>
+    <text x="35" y="74" class="col">sku (UNIQUE)</text><text x="175" y="74" class="type">VARCHAR(50)</text>
+    <text x="35" y="96" class="col">product_name</text><text x="175" y="96" class="type">VARCHAR(150)</text>
+    <text x="12" y="118" class="fk">FK</text><text x="35" y="118" class="col">category_id</text><text x="175" y="118" class="type">INT</text>
+    <text x="12" y="140" class="fk">FK</text><text x="35" y="140" class="col">supplier_id</text><text x="175" y="140" class="type">INT</text>
+    <text x="35" y="162" class="col">cost_price</text><text x="175" y="162" class="type">DECIMAL(10,2)</text>
+    <text x="35" y="184" class="col">unit_price</text><text x="175" y="184" class="type">DECIMAL(10,2)</text>
+    <text x="35" y="206" class="col">quantity_in_stock</text><text x="175" y="206" class="type">INT</text>
+    <text x="35" y="228" class="col">reorder_level</text><text x="175" y="228" class="type">INT</text>
+    <text x="35" y="250" class="col">unit_of_measure</text><text x="175" y="250" class="type">VARCHAR(30)</text>
+    <text x="35" y="272" class="col">status</text><text x="175" y="272" class="type">ENUM('ACTIVE'...)</text>
+  </g>
+
+  <!-- TABLE: USERS (Top Right) -->
+  <g transform="translate(710, 100)">
+    <rect width="210" height="170" fill="#ffffff" stroke="#e6ded6" stroke-width="1.5" rx="6"/>
+    <rect width="210" height="32" fill="#231a15" rx="6"/>
+    <text x="12" y="21" class="tbl-hdr">USERS (BARISTAS/MGR)</text>
+    <text x="12" y="52" class="pk">PK</text><text x="35" y="52" class="col">user_id</text><text x="150" y="52" class="type">INT (AI)</text>
+    <text x="35" y="74" class="col">username (UNIQUE)</text><text x="150" y="74" class="type">VARCHAR(50)</text>
+    <text x="35" y="96" class="col">password</text><text x="150" y="96" class="type">VARCHAR(100)</text>
+    <text x="35" y="118" class="col">full_name</text><text x="150" y="118" class="type">VARCHAR(100)</text>
+    <text x="35" y="140" class="col">role</text><text x="150" y="140" class="type">ENUM('ADMIN'...)</text>
+    <text x="35" y="160" class="col">status</text><text x="150" y="160" class="type">ENUM('ACTIVE'...)</text>
+  </g>
+
+  <!-- TABLE: STOCK_TRANSACTIONS (Bottom Right) -->
+  <g transform="translate(710, 310)">
+    <rect width="210" height="210" fill="#ffffff" stroke="#e6ded6" stroke-width="1.5" rx="6"/>
+    <rect width="210" height="32" fill="#15803d" rx="6"/>
+    <text x="12" y="21" class="tbl-hdr">STOCK_TRANSACTIONS</text>
+    <text x="12" y="52" class="pk">PK</text><text x="35" y="52" class="col">transaction_id</text><text x="150" y="52" class="type">INT (AI)</text>
+    <text x="12" y="74" class="fk">FK</text><text x="35" y="74" class="col">product_id</text><text x="150" y="74" class="type">INT</text>
+    <text x="35" y="96" class="col">transaction_type</text><text x="150" y="96" class="type">ENUM</text>
+    <text x="35" y="118" class="col">quantity</text><text x="150" y="118" class="type">INT</text>
+    <text x="35" y="140" class="col">reference_no</text><text x="150" y="140" class="type">VARCHAR(50)</text>
+    <text x="35" y="162" class="col">remarks</text><text x="150" y="162" class="type">TEXT</text>
+    <text x="12" y="184" class="fk">FK</text><text x="35" y="184" class="col">performed_by</text><text x="150" y="184" class="type">INT</text>
+    <text x="35" y="204" class="col">transaction_date</text><text x="150" y="204" class="type">TIMESTAMP</text>
+  </g>
+
+  <!-- RELATIONSHIP LINES -->
+  <!-- Categories to Products (1 to N) -->
+  <path d="M 250 150 L 360 215" class="rel-line"/>
+  <circle cx="254" cy="150" r="4" fill="#5c3a21"/>
+  <polygon points="352,210 360,215 352,220" fill="#b45309"/>
+
+  <!-- Suppliers to Products (1 to N) -->
+  <path d="M 250 360 L 360 240" class="rel-line"/>
+  <circle cx="254" cy="360" r="4" fill="#785947"/>
+  <polygon points="352,245 360,240 354,235" fill="#b45309"/>
+
+  <!-- Products to Stock Transactions (1 to N) -->
+  <path d="M 610 250 L 710 380" class="rel-line"/>
+  <circle cx="614" cy="250" r="4" fill="#b45309"/>
+  <polygon points="702,374 710,380 706,386" fill="#15803d"/>
+
+  <!-- Users to Stock Transactions (1 to N) -->
+  <path d="M 815 270 L 815 310" class="rel-line"/>
+  <circle cx="815" cy="274" r="4" fill="#231a15"/>
+  <polygon points="810,302 815,310 820,302" fill="#15803d"/>
+</svg>

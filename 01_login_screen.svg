@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#fbf9f6"/>
+  <!-- Window Container -->
+  <rect x="180" y="50" width="440" height="500" rx="10" fill="#ffffff" stroke="#e6ded6" stroke-width="2" filter="drop-shadow(0 10px 15px rgba(62,39,35,0.08))"/>
+  
+  <!-- Header (Espresso Theme) -->
+  <rect x="180" y="50" width="440" height="100" rx="10" fill="#231a15"/>
+  <text x="210" y="95" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="bold" fill="#ffffff">BrewTrack</text>
+  <text x="210" y="125" font-family="'Segoe UI', sans-serif" font-size="13" fill="#d6c5bb">Coffee Shop Inventory Management | ISUFST Final</text>
+
+  <!-- Login Form -->
+  <text x="220" y="190" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#1c130e">Sign in to manage cafe stocks &amp; supplies:</text>
+
+  <text x="220" y="230" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#5c3a21">Username:</text>
+  <rect x="220" y="240" width="360" height="38" rx="6" fill="#fdfaf7" stroke="#e6ded6"/>
+  <text x="235" y="264" font-family="'Segoe UI', sans-serif" font-size="13" fill="#1c130e">admin</text>
+
+  <text x="220" y="305" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="bold" fill="#5c3a21">Password:</text>
+  <rect x="220" y="315" width="360" height="38" rx="6" fill="#fdfaf7" stroke="#e6ded6"/>
+  <text x="235" y="340" font-family="'Segoe UI', sans-serif" font-size="16" fill="#1c130e">••••••••</text>
+
+  <!-- Sign In Button -->
+  <rect x="220" y="380" width="360" height="42" rx="6" fill="#5c3a21"/>
+  <text x="400" y="407" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Sign In to Coffee System</text>
+
+  <!-- Quick Demo Box -->
+  <rect x="220" y="445" width="360" height="60" rx="6" fill="#fdfaf7" stroke="#e6ded6"/>
+  <text x="235" y="468" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#856b5b">QUICK DEMO LOGINS</text>
+  <rect x="235" y="475" width="130" height="24" rx="4" fill="#ede2d8"/>
+  <text x="300" y="491" font-family="'Segoe UI', sans-serif" font-size="11" fill="#231a15" text-anchor="middle">Manager Demo (admin)</text>
+  <rect x="380" y="475" width="130" height="24" rx="4" fill="#ede2d8"/>
+  <text x="445" y="491" font-family="'Segoe UI', sans-serif" font-size="11" fill="#231a15" text-anchor="middle">Barista Demo (barista)</text>
+</svg>

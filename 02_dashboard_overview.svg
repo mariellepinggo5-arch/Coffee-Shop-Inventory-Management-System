@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="100%" height="100%">
+  <rect width="1000" height="620" fill="#fbf9f6"/>
+  
+  <!-- Sidebar (Espresso Dark) -->
+  <rect width="230" height="620" fill="#231a15"/>
+  <text x="25" y="45" font-family="'Segoe UI', sans-serif" font-size="19" font-weight="bold" fill="#ffffff">BrewTrack</text>
+  <text x="25" y="65" font-family="'Segoe UI', sans-serif" font-size="11" fill="#d6c5bb">Artisan Coffee Stock Control</text>
+
+  <!-- Nav Items -->
+  <rect x="10" y="95" width="210" height="38" rx="6" fill="#5c3a21"/>
+  <text x="25" y="119" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Beans &amp; Ingredients</text>
+
+  <rect x="10" y="140" width="210" height="38" rx="6" fill="#231a15"/>
+  <text x="25" y="164" font-family="'Segoe UI', sans-serif" font-size="13" fill="#d6c5bb">Low Stock Alerts (3)</text>
+
+  <rect x="10" y="185" width="210" height="38" rx="6" fill="#231a15"/>
+  <text x="25" y="209" font-family="'Segoe UI', sans-serif" font-size="13" fill="#d6c5bb">Cafe Categories</text>
+
+  <rect x="10" y="230" width="210" height="38" rx="6" fill="#231a15"/>
+  <text x="25" y="254" font-family="'Segoe UI', sans-serif" font-size="13" fill="#d6c5bb">Roasters &amp; Suppliers</text>
+
+  <rect x="10" y="275" width="210" height="38" rx="6" fill="#231a15"/>
+  <text x="25" y="299" font-family="'Segoe UI', sans-serif" font-size="13" fill="#d6c5bb">Delivery &amp; Bar Logs</text>
+
+  <!-- User Card Bottom -->
+  <rect y="540" width="230" height="80" fill="#18120e"/>
+  <text x="20" y="565" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="bold" fill="#ffffff">Marielle Cafe Manager</text>
+  <text x="20" y="582" font-family="'Segoe UI', sans-serif" font-size="11" fill="#d6c5bb">Role: ADMIN</text>
+  <rect x="20" y="590" width="80" height="20" rx="4" fill="#dc2626"/>
+  <text x="60" y="604" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">Log Out</text>
+
+  <!-- Content Header -->
+  <text x="260" y="45" font-family="'Segoe UI', sans-serif" font-size="22" font-weight="bold" fill="#1c130e">Cafe Inventory &amp; Stock Overview</text>
+
+  <!-- KPI Cards -->
+  <g transform="translate(260, 70)">
+    <rect width="165" height="75" rx="8" fill="#ffffff" stroke="#e6ded6"/>
+    <text x="15" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#856b5b">TOTAL CAFE ITEMS</text>
+    <text x="15" y="55" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#5c3a21">10 Lines</text>
+  </g>
+  <g transform="translate(440, 70)">
+    <rect width="165" height="75" rx="8" fill="#ffffff" stroke="#e6ded6"/>
+    <text x="15" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#856b5b">BEANS &amp; DAIRY ON HAND</text>
+    <text x="15" y="55" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#15803d">126 Units</text>
+  </g>
+  <g transform="translate(620, 70)">
+    <rect width="165" height="75" rx="8" fill="#ffffff" stroke="#e6ded6"/>
+    <text x="15" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#856b5b">REORDER ALERTS</text>
+    <text x="15" y="55" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#b45309">3 Alerts</text>
+  </g>
+  <g transform="translate(800, 70)">
+    <rect width="165" height="75" rx="8" fill="#ffffff" stroke="#e6ded6"/>
+    <text x="15" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#856b5b">ROASTERS &amp; VENDORS</text>
+    <text x="15" y="55" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold" fill="#785947">4 Partners</text>
+  </g>
+
+  <!-- Table View Mockup -->
+  <g transform="translate(260, 165)">
+    <rect width="715" height="430" rx="8" fill="#ffffff" stroke="#e6ded6"/>
+    <rect width="715" height="36" rx="8" fill="#f5ede4"/>
+    <text x="15" y="23" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#422815">SKU</text>
+    <text x="110" y="23" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#422815">INGREDIENT / ITEM</text>
+    <text x="320" y="23" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#422815">CATEGORY</text>
+    <text x="460" y="23" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#422815">PRICE</text>
+    <text x="540" y="23" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#422815">STOCK</text>
+    <text x="615" y="23" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#422815">STATUS</text>
+
+    <!-- Row 1: Espresso Beans -->
+    <text x="15" y="60" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">CF-BN-001</text>
+    <text x="110" y="60" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">Signature Espresso Blend (1kg Whole Bean)</text>
+    <text x="320" y="60" font-family="'Segoe UI', sans-serif" font-size="11" fill="#856b5b">Coffee Beans</text>
+    <text x="460" y="60" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">PHP 1,150.00</text>
+    <text x="540" y="60" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">18 Bag(s)</text>
+    <text x="615" y="60" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#15803d">IN STOCK</text>
+    <line x1="10" y1="75" x2="705" y2="75" stroke="#f5ede4"/>
+
+    <!-- Row 2: Oat Milk (Low Stock) -->
+    <text x="15" y="100" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">CF-MK-001</text>
+    <text x="110" y="100" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">Barista Edition Oat Milk (1L Carton)</text>
+    <text x="320" y="100" font-family="'Segoe UI', sans-serif" font-size="11" fill="#856b5b">Dairy &amp; Plant Milk</text>
+    <text x="460" y="100" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">PHP 210.00</text>
+    <text x="540" y="100" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">5 Carton(s)</text>
+    <text x="615" y="100" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#b45309">LOW STOCK</text>
+    <line x1="10" y1="115" x2="705" y2="115" stroke="#f5ede4"/>
+
+    <!-- Row 3: Vanilla Syrup -->
+    <text x="15" y="140" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">CF-SY-001</text>
+    <text x="110" y="140" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">Artisan French Vanilla Syrup (750ml)</text>
+    <text x="320" y="140" font-family="'Segoe UI', sans-serif" font-size="11" fill="#856b5b">Syrups &amp; Flavors</text>
+    <text x="460" y="140" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">PHP 550.00</text>
+    <text x="540" y="140" font-family="'Segoe UI', sans-serif" font-size="11" fill="#1c130e">12 Bottle(s)</text>
+    <text x="615" y="140" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="bold" fill="#15803d">IN STOCK</text>
+    <line x1="10" y1="155" x2="705" y2="155" stroke="#f5ede4"/>
+  </g>
+</svg>

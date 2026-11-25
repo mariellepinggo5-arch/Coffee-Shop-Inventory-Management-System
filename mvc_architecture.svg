@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 24px; font-weight: bold; fill: #1c130e; }
+      .subtitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #785947; }
+      .box-title { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: bold; fill: #ffffff; }
+      .item-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #2c1d15; }
+      .label-text { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: #5c3a21; }
+      .arrow { stroke: #5c3a21; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .arrow-rev { stroke: #15803d; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 5,4; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5c3a21" />
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#15803d" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="#fbf9f6" rx="12"/>
+  <rect x="20" y="20" width="920" height="500" fill="#ffffff" stroke="#e6ded6" stroke-width="2" rx="10"/>
+
+  <!-- Title -->
+  <text x="50" y="60" class="title">BrewTrack - Coffee Shop Model-View-Controller (MVC) Architecture</text>
+  <text x="50" y="85" class="subtitle">Cafe Stock Separation of Concerns: Barista GUI ⇄ Controllers ⇄ Business Services ⇄ DAOs ⇄ MySQL</text>
+
+  <!-- VIEW BOX -->
+  <g transform="translate(60, 120)">
+    <rect width="240" height="260" rx="8" fill="#fdfaf7" stroke="#b45309" stroke-width="2"/>
+    <rect width="240" height="44" rx="8" fill="#5c3a21"/>
+    <text x="20" y="28" class="box-title">VIEW (Swing GUI)</text>
+    <text x="20" y="75" class="item-text" font-weight="bold">• MainFrame / LoginFrame</text>
+    <text x="20" y="100" class="item-text">• ProductPanel (Beans &amp; Milk)</text>
+    <text x="20" y="125" class="item-text">• LowStockPanel (Reorder Alerts)</text>
+    <text x="20" y="150" class="item-text">• Category &amp; Supplier Panels</text>
+    <text x="20" y="175" class="item-text">• StockAdjustmentDialog</text>
+    <rect x="15" y="205" width="210" height="40" rx="6" fill="#f5ede4"/>
+    <text x="25" y="230" class="item-text" font-style="italic">Barista inputs &amp; table renderers</text>
+  </g>
+
+  <!-- CONTROLLER BOX -->
+  <g transform="translate(360, 120)">
+    <rect width="240" height="260" rx="8" fill="#fbf9f6" stroke="#785947" stroke-width="2"/>
+    <rect width="240" height="44" rx="8" fill="#785947"/>
+    <text x="20" y="28" class="box-title">CONTROLLER Layer</text>
+    <text x="20" y="75" class="item-text" font-weight="bold">• ProductController</text>
+    <text x="20" y="100" class="item-text">• StockController (Restock/Dispense)</text>
+    <text x="20" y="125" class="item-text">• CategoryController</text>
+    <text x="20" y="150" class="item-text">• SupplierController (Roasters)</text>
+    <text x="20" y="175" class="item-text">• AuthController (Manager/Barista)</text>
+    <rect x="15" y="205" width="210" height="40" rx="6" fill="#ede2d8"/>
+    <text x="25" y="230" class="item-text" font-style="italic">Dispatches events &amp; updates View</text>
+  </g>
+
+  <!-- MODEL / SERVICE / DAO BOX -->
+  <g transform="translate(660, 120)">
+    <rect width="240" height="260" rx="8" fill="#f2f9f4" stroke="#15803d" stroke-width="2"/>
+    <rect width="240" height="44" rx="8" fill="#15803d"/>
+    <text x="20" y="28" class="box-title">MODEL &amp; DAO Layer</text>
+    <text x="20" y="75" class="item-text" font-weight="bold">• Models: Product, Category...</text>
+    <text x="20" y="100" class="item-text" font-weight="bold">• Services: StockService...</text>
+    <text x="20" y="125" class="item-text" font-weight="bold">• DAOs: ProductDAO, DBConn...</text>
+    <text x="20" y="150" class="item-text">• Parameterized PreparedStatements</text>
+    <text x="20" y="175" class="item-text">• Negative Stock &amp; Spoilage Guards</text>
+    <rect x="15" y="205" width="210" height="40" rx="6" fill="#dcfce7"/>
+    <text x="25" y="230" class="item-text" font-style="italic">Atomic commits &amp; persistence</text>
+  </g>
+
+  <!-- DATABASE CYLINDER (BOTTOM) -->
+  <g transform="translate(480, 420)">
+    <rect x="-110" y="0" width="220" height="60" rx="10" fill="#f8fafc" stroke="#b45309" stroke-width="2"/>
+    <text x="0" y="28" font-family="'Segoe UI', sans-serif" font-size="15" font-weight="bold" fill="#78350f" text-anchor="middle">MySQL 8.0+ / MariaDB</text>
+    <text x="0" y="48" font-family="'Segoe UI', sans-serif" font-size="12" fill="#785947" text-anchor="middle">inventory_db (Cafe Tables &amp; Constraints)</text>
+  </g>
+
+  <!-- CONNECTING ARROWS -->
+  <!-- View to Controller -->
+  <path d="M 300 200 L 350 200" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="325" y="190" class="label-text" text-anchor="middle">Barista Action</text>
+
+  <!-- Controller to View -->
+  <path d="M 350 270 L 305 270" class="arrow-rev" marker-end="url(#arrowhead-green)"/>
+  <text x="325" y="290" font-family="'Segoe UI', sans-serif" font-size="11" fill="#15803d" font-weight="600" text-anchor="middle">Update GUI</text>
+
+  <!-- Controller to Model/Service -->
+  <path d="M 600 200 L 650 200" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="625" y="190" class="label-text" text-anchor="middle">Service Call</text>
+
+  <!-- Model to Controller -->
+  <path d="M 650 270 L 605 270" class="arrow-rev" marker-end="url(#arrowhead-green)"/>
+  <text x="625" y="290" font-family="'Segoe UI', sans-serif" font-size="11" fill="#15803d" font-weight="600" text-anchor="middle">Cafe Records</text>
+
+  <!-- DAO to Database -->
+  <path d="M 780 380 L 780 440 L 600 440" class="arrow" marker-end="url(#arrowhead)"/>
+  <text x="790" y="420" class="label-text">JDBC SQL</text>
+
+  <!-- Database to DAO -->
+  <path d="M 600 460 L 760 460 L 760 385" class="arrow-rev" marker-end="url(#arrowhead-green)"/>
+  <text x="680" y="478" font-family="'Segoe UI', sans-serif" font-size="11" fill="#15803d" font-weight="600">ResultSet</text>
+</svg>
